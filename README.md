@@ -20,7 +20,8 @@ These files have the following schema:
         "specter": [<candidate_paper_id>],  # candidates identified using model-based selection (SPECTER as the model)
         "graph": [<candidate_paper_id>],  # candidates identified using graph-based selection
         "most_cited": [<candidate_paper_id>],  # candidates identified using citation count as the method
-        "random": [<candidate_paper_id>]   # candidates identified with random sampling
+        "random": [<candidate_paper_id>],   # candidates identified with random sampling
+        "true": [<candidate_paper_id>]  # candidates that are actually cited in the query article
         },
     <query_paper_id>: {
         ...

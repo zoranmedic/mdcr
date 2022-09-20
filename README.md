@@ -10,6 +10,31 @@ JSON files containing validation and test splits of MDCR are available here:
 * [val_split](https://takelab.fer.hr/data/mdcr/mdcr_val.json)
 * [test_split](https://takelab.fer.hr/data/mdcr/mdcr_test.json)
 
+These files have the following schema:
+```
+{
+  <MAG_field>: {
+    <query_paper_id>: {
+        "bm25": [<str>],  # candidate paper IDs identified using model-based selection (BM25 as the model)
+        "scincl": [<str>],  # candidate paper IDs identified using model-based selection (SciNCL as the model)
+        "specter": [<str>],  # candidate paper IDs identified using model-based selection (SPECTER as the model)
+        "graph": [<str>],  # candidate paper IDs identified using graph-based selection
+        "most_cited": [<str>],  # candidate paper IDs identified using citation count as the method
+        "random": [<str>]   # candidate paper IDs identified with random sampling
+        },
+    <query_paper_id>: {
+        ...
+        }
+    ...
+    },
+  <MAG_field>: {
+    ...
+    }
+  ...
+}```
+
+In order to evaluate the model, recommendation scores for each combination of `query_paper_id` and a paper from the candidates list must be calculated and stored in a JSON file (details below).
+
 Files containing all the papers' titles and abstracts are stored in separate `.jsonl` files (around 250MB each), that can be found on the following links:
 * [val_data](https://takelab.fer.hr/data/mdcr/mdcr_val_data.jsonl)
 * [test_data](https://takelab.fer.hr/data/mdcr/mdcr_test_data.jsonl)

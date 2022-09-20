@@ -15,12 +15,12 @@ These files have the following schema:
 {
   <MAG_field>: {
     <query_paper_id>: {
-        "bm25": [<str>],  # candidate paper IDs identified using model-based selection (BM25 as the model)
-        "scincl": [<str>],  # candidate paper IDs identified using model-based selection (SciNCL as the model)
-        "specter": [<str>],  # candidate paper IDs identified using model-based selection (SPECTER as the model)
-        "graph": [<str>],  # candidate paper IDs identified using graph-based selection
-        "most_cited": [<str>],  # candidate paper IDs identified using citation count as the method
-        "random": [<str>]   # candidate paper IDs identified with random sampling
+        "bm25": [<candidate_paper_id>],  # candidates identified using model-based selection (BM25 as the model)
+        "scincl": [<candidate_paper_id>],  # candidates identified using model-based selection (SciNCL as the model)
+        "specter": [<candidate_paper_id>],  # candidates identified using model-based selection (SPECTER as the model)
+        "graph": [<candidate_paper_id>],  # candidates identified using graph-based selection
+        "most_cited": [<candidate_paper_id>],  # candidates identified using citation count as the method
+        "random": [<candidate_paper_id>]   # candidates identified with random sampling
         },
     <query_paper_id>: {
         ...
@@ -34,7 +34,7 @@ These files have the following schema:
 }
 ```
 
-In order to evaluate the model, recommendation scores for each combination of `query_paper_id` and a paper from the candidates list must be calculated and stored in a JSON file (details below).
+In order to evaluate the model, recommendation scores for each combination of `query_paper_id` and `candidate_paper_id` must be calculated and stored in a JSON file (details below).
 
 Files containing all the papers' titles and abstracts are stored in separate `.jsonl` files (around 250MB each), that can be found on the following links:
 * [val_data](https://takelab.fer.hr/data/mdcr/mdcr_val_data.jsonl)

@@ -31,7 +31,8 @@ These files have the following schema:
     ...
     }
   ...
-}```
+}
+```
 
 In order to evaluate the model, recommendation scores for each combination of `query_paper_id` and a paper from the candidates list must be calculated and stored in a JSON file (details below).
 

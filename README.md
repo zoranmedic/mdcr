@@ -1,6 +1,6 @@
 # MDCR - Multi-Domain Citation Recommendation benchmark
 
-Benchmark dataset for the evaluation of scientific article representations on the task of citation recommendation across various scientific fields, presented in the paper [Large-scale Evaluation of Transformer-based Article Encoders on the Task of Citation Recommendation](https://arxiv.org/abs/2209.05452)
+Benchmark dataset for the evaluation of scientific article representations on the task of citation recommendation across various scientific fields, presented in the paper [Large-scale Evaluation of Transformer-based Article Encoders on the Task of Citation Recommendation](https://aclanthology.org/2022.sdp-1.3/)
 
 Repository contains links for downloading the benchmark data splits (both validation and test splits), as well as the script for evaluating recommendation scores obtained by a recommendation model for the data in the splits. If you encounter any problems or errors feel free to raise an issue or send an email to <zoran.medic@fer.hr>.
 
